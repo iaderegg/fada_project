@@ -1,0 +1,48 @@
+
+{% load static %}
+<html>
+    <head>
+        <title>Proyecto FADA</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'organize_sports_delegations/css/bootstrap.min.css' %}" />           
+        <link rel="stylesheet" type="text/css" href="{% static 'organize_sports_delegations/css/bootstrap-theme.min.css' %}" />           
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Proyecto FADA</h1>
+                <hr>
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="input_file" class="col-sm-2 control-label">Archivo a procesar: </label>
+                        <div class="col-sm-4">
+                            <input type="file" class="form-control" id="input_file" name="input_file">
+                        </div>
+                        <div class="col sm-4">
+                            {% csrf_token %}
+                            <button type="button" id="button_send_file" class="btn btn-success">Procesar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <section>
+                
+        </section>
+
+        <footer>
+
+        </footer>
+
+        <script src="{% static 'organize_sports_delegations/js/jquery-3.2.1.js' %}"></script>
+        <script src="{% static 'organize_sports_delegations/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'organize_sports_delegations/js/main.js' %}"></script>
+        
+    </body>
+</html>
